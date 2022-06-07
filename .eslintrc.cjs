@@ -15,6 +15,9 @@ module.exports = {
   env: {
     es6: true,
     'vue/setup-compiler-macros': true,
+    es2020: true,
+    node: true,
+    jest: true,
   },
   overrides: [
     {
