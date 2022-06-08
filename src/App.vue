@@ -1,13 +1,25 @@
 <template>
   <header>
     <h1>The Learning Resources App</h1>
+    <ul>
+      <learning-resource
+        v-for="res in storedResources"
+        :key="res.id"
+        :id="res.id"
+        :title="res.title"
+        :description="res.description"
+        :link="res.link"
+        >{{ res }}</learning-resource
+      >
+    </ul>
   </header>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 
-import type StoredResource from './types/StoredResource';
+import LearningResource from '@/components/learning-resources/LearningResource.vue';
+import StoredResource from '@/types/StoredResource';
 
 interface VueData {
   storedResources: StoredResource[];
@@ -15,6 +27,7 @@ interface VueData {
 
 export default defineComponent({
   name: 'App',
+  components: { LearningResource },
   data(): VueData {
     return {
       storedResources: [

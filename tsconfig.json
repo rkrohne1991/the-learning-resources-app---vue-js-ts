@@ -12,10 +12,7 @@
     "sourceMap": true,
     "baseUrl": ".",
     "paths": {
-      "/@/*": [
-        // / to begin with.
-        "src/*"
-      ]
+      "@/*": ["./src/*", "./dist/*"]
     },
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
     "types": ["vite/client", "jest", "@types/jest", "node", "cypress"]
