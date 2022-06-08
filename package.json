@@ -16,6 +16,9 @@
     "format": "prettier -w .",
     "prepare": "husky install"
   },
+  "lint-staged": {
+    "*.{vue,js,ts}": "eslint --fix"
+  },
   "dependencies": {
     "vue": "^3.2.36"
   },
