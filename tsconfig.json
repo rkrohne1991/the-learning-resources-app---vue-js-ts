@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "esnext",
     "module": "esnext",
     "strict": true,
     "jsx": "preserve",
     "importHelpers": true,
     "moduleResolution": "node",
-    "skipLibCheck": true,
+    "resolveJsonModule": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
@@ -14,9 +14,16 @@
     "paths": {
       "@/*": ["./src/*", "./dist/*"]
     },
-    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
-    "types": ["vite/client", "jest", "@types/jest", "node", "cypress"]
+    "lib": ["esnext", "dom"],
+    "types": [
+      "vuetify",
+      "vite/client",
+      "jest",
+      "@types/jest",
+      "node",
+      "cypress"
+    ]
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
   "exclude": ["node_modules"]
 }
