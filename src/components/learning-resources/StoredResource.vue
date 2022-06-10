@@ -13,15 +13,17 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from 'vue';
+import type { PropType } from 'vue';
+import { defineComponent } from 'vue';
 
+import type StoredResourceType from '../../types/StoredResourceType';
 import LearningResource from './LearningResource.vue';
 
 export default defineComponent({
   name: 'StoredResource',
   props: {
     resources: {
-      type: Object as PropType<any>,
+      type: Object as PropType<StoredResourceType[]>,
     },
   },
   components: { LearningResource },
