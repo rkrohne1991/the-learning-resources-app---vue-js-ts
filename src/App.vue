@@ -18,8 +18,8 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 
-import LearningResource from '@/components/learning-resources/LearningResource.vue';
-import StoredResource from '@/types/StoredResource';
+import LearningResource from './components/learning-resources/LearningResource.vue';
+import StoredResource from './types/StoredResource';
 
 interface VueData {
   storedResources: StoredResource[];
