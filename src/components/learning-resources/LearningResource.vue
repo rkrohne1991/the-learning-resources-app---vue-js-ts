@@ -1,16 +1,20 @@
 <template>
-  <li>
-    <div>
-      <header>
-        <h3>{{ title }}</h3>
-        <button>Delete</button>
-      </header>
-      <p>{{ description }}</p>
+  <v-list-item class="flex-column">
+    <div class="w-100">
+      <v-list-item-header class="d-flex justify-space-between align-center">
+        <v-list-item-title class="my-2">{{ title }}</v-list-item-title>
+        <v-btn>Delete</v-btn>
+      </v-list-item-header>
+      <v-list-item-subtitle class="my-2">{{
+        description
+      }}</v-list-item-subtitle>
       <nav>
-        <a :href="link" target="_blank">View Rersource</a>
+        <a variant="text" class="px-0" :href="link" target="_blank"
+          >View Rersource</a
+        >
       </nav>
     </div>
-  </li>
+  </v-list-item>
 </template>
 
 <script lang="ts">
@@ -26,3 +30,22 @@ export default defineComponent({
   },
 });
 </script>
+
+<style scoped lang="scss">
+a {
+  color: rgb(var(--v-theme-orange));
+  text-decoration: none;
+  transition: all 0.3s;
+
+  &:hover,
+  &:active {
+    background: none;
+    color: rgb(var(--v-theme-yellow));
+    transition: all 0.3s;
+  }
+}
+
+.v-list-item-title {
+  font-size: 1.25rem;
+}
+</style>
