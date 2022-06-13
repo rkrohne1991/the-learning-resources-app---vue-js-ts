@@ -1,6 +1,6 @@
 <template>
   <v-list-item class="flex-column">
-    <div class="w-100">
+    <base-card class="w-100">
       <v-list-item-header class="d-flex justify-space-between align-center">
         <v-list-item-title class="my-2">{{ title }}</v-list-item-title>
         <v-btn>Delete</v-btn>
@@ -13,12 +13,14 @@
           >View Rersource</a
         >
       </nav>
-    </div>
+    </base-card>
   </v-list-item>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+
+import BaseCard from '../UI/BaseCard.vue';
 
 export default defineComponent({
   name: 'LearningResource',
@@ -28,6 +30,7 @@ export default defineComponent({
     description: String,
     link: String,
   },
+  components: { BaseCard },
 });
 </script>
 

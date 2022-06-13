@@ -1,5 +1,4 @@
 import 'vuetify/lib/styles/main.sass';
-import '../sass/variables.scss';
 
 import { createVuetify } from 'vuetify';
 import * as components from 'vuetify/lib/components/index';
@@ -22,6 +21,7 @@ export const vuetify = createVuetify({
           // warning: '#2d3436',
           yellow: '#c89300',
           orange: '#ce5c00',
+          pink: '#640032',
         },
         dark: false,
         variables: {},

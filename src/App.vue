@@ -1,13 +1,16 @@
 <template>
-  <header>
-    <h1 class="text-primary">The Learning Resources App</h1>
-    <stored-resource :resources="storedResources" />
-  </header>
+  <v-app>
+    <the-header title="The Learning Resources App" />
+    <v-main>
+      <stored-resource :resources="storedResources" />
+    </v-main>
+  </v-app>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 
+import TheHeader from './components/layout/TheHeader.vue';
 import StoredResource from './components/learning-resources/StoredResource.vue';
 import type StoredResourceType from './types/StoredResourceType';
 
@@ -17,7 +20,7 @@ interface VueData {
 
 export default defineComponent({
   name: 'App',
-  components: { StoredResource },
+  components: { StoredResource, TheHeader },
   data(): VueData {
     return {
       storedResources: [
@@ -56,5 +59,9 @@ body {
 
 .w-100 {
   width: 100%;
+}
+
+.elevation-1 {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
 }
 </style>

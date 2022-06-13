@@ -1,5 +1,5 @@
 <template>
-  <v-list class="mx-auto px-0 py-0" dense max-width="640">
+  <v-list class="mx-auto px-0 py-0 w-100" dense max-width="640">
     <learning-resource
       v-for="res in resources"
       :key="res.id"
