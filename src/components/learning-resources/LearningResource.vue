@@ -1,5 +1,5 @@
 <template>
-  <v-list-item class="flex-column">
+  <v-list-item class="flex-column px-0 py-0">
     <base-card class="w-100">
       <v-list-item-header class="d-flex justify-space-between align-center">
         <v-list-item-title class="my-2">{{ title }}</v-list-item-title>
