@@ -1,12 +1,6 @@
 <template>
-  <v-app>
-    <the-header title="The Learning Resources App" />
-    <v-main>
-      <v-container class="px-0 py-0">
-        <the-resources />
-      </v-container>
-    </v-main>
-  </v-app>
+  <the-header title="RememberMe"></the-header>
+  <the-resources />
 </template>
 
 <script lang="ts">
@@ -21,7 +15,7 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
+<style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 * {
@@ -34,17 +28,5 @@ html {
 
 body {
   margin: 0;
-}
-
-.w-100 {
-  width: 100%;
-}
-
-.elevation-1 {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-}
-
-.v-container {
-  max-width: 640px;
 }
 </style>
