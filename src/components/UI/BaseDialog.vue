@@ -23,9 +23,7 @@ import { defineComponent } from 'vue';
 export default defineComponent({
   name: 'BaseDialog',
   props: {
-    title: {
-      type: String,
-    },
+    title: String,
   },
   emits: ['close'],
 });
