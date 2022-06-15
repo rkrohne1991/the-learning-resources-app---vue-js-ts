@@ -1,15 +1,25 @@
 <template>
   <base-card>
-    <v-form>
-      <v-text-field label="Title" class="testing" />
-      <v-textarea label="Description" />
-      <v-text-field label="Link" />
+    <form>
+      <div class="form-control">
+        <label for="title">Title</label>
+        <input id="title" name="title" type="text" />
+      </div>
+      <div class="form-control">
+        <label for="description">Description</label>
+        <textarea id="description" name="description" rows="3" />
+      </div>
+      <div class="form-control">
+        <label for="link">Link</label>
+        <input id="link" name="link" type="url" />
+      </div>
       <div>
         <base-button type="submit">Add Resource</base-button>
       </div>
-    </v-form>
+    </form>
   </base-card>
 </template>
+
 <script lang="ts">
 import { defineComponent } from 'vue';
 
@@ -39,5 +49,9 @@ textarea:focus {
   outline: none;
   border-color: #3a0061;
   background-color: #f7ebff;
+}
+
+.form-control {
+  margin: 1rem 0;
 }
 </style>

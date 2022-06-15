@@ -1,5 +1,7 @@
 <template>
-  <v-btn depressed :class="mode"><slot></slot></v-btn>
+  <button :class="mode">
+    <slot></slot>
+  </button>
 </template>
 
 <script lang="ts">
@@ -21,25 +23,24 @@ button {
   font-family: inherit;
   background-color: #3a0061;
   border: 1px solid #3a0061;
-  color: #fff;
+  color: white;
   cursor: pointer;
-  box-shadow: none;
+}
 
-  &:hover,
-  &:active {
-    background-color: #270041;
-    border-color: #270041;
-  }
+button:hover,
+button:active {
+  background-color: #270041;
+  border-color: #270041;
 }
 
 .flat {
   background-color: transparent;
   color: #3a0061;
   border: none;
+}
 
-  &:hover,
-  &:active {
-    background-color: #edd2ff;
-  }
+.flat:hover,
+.flat:active {
+  background-color: #edd2ff;
 }
 </style>

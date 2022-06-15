@@ -1,15 +1,13 @@
 <template>
-  <v-list class="mx-auto px-0 py-0 w-100 overflow-visible">
+  <ul>
     <learning-resource
       v-for="res in storedResources"
       :key="res.id"
-      :id="res.id"
       :title="res.title"
       :description="res.description"
       :link="res.link"
-      >{{ res }}</learning-resource
-    >
-  </v-list>
+    ></learning-resource>
+  </ul>
 </template>
 
 <script lang="ts">
@@ -28,3 +26,13 @@ export default defineComponent({
   components: { LearningResource },
 });
 </script>
+
+<style scoped lang="scss">
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin: auto;
+  max-width: 40rem;
+}
+</style>

@@ -1,11 +1,7 @@
 <template>
-  <v-app-bar height="80" color="pink" app>
-    <v-app-bar-title
-      class="white--text text-center text-h4 font-weight-bold nomral-line-height"
-    >
-      {{ title }}
-    </v-app-bar-title>
-  </v-app-bar>
+  <header>
+    <h1>{{ title }}</h1>
+  </header>
 </template>
 
 <script lang="ts">
@@ -15,7 +11,17 @@ export default defineComponent({ name: 'TheHeader', props: { title: String } });
 </script>
 
 <style scoped lang="scss">
-.nomral-line-height {
-  line-height: normal;
+header {
+  width: 100%;
+  height: 5rem;
+  background-color: #640032;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 {
+  color: #fff;
+  margin: 0;
 }
 </style>

@@ -1,20 +1,16 @@
 <template>
-  <v-list-item class="flex-column px-0 py-0">
-    <base-card class="w-100">
-      <v-list-item-header class="d-flex justify-space-between align-center">
-        <v-list-item-title class="my-2">{{ title }}</v-list-item-title>
+  <li>
+    <base-card>
+      <header>
+        <h3>{{ title }}</h3>
         <base-button mode="flat">Delete</base-button>
-      </v-list-item-header>
-      <v-list-item-subtitle class="my-2">{{
-        description
-      }}</v-list-item-subtitle>
+      </header>
+      <p>{{ description }}</p>
       <nav>
-        <a variant="text" class="px-0" :href="link" target="_blank"
-          >View Rersource</a
-        >
+        <a :href="link">View Resource</a>
       </nav>
     </base-card>
-  </v-list-item>
+  </li>
 </template>
 
 <script lang="ts">
@@ -32,20 +28,33 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
+li {
+  margin: auto;
+  max-width: 40rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
 a {
-  color: rgb(var(--v-theme-orange));
   text-decoration: none;
-  transition: all 0.3s;
+  color: #ce5c00;
 
   &:hover,
   &:active {
-    background: none;
-    color: rgb(var(--v-theme-yellow));
-    transition: all 0.3s;
+    color: #c89300;
   }
-}
-
-.v-list-item-title {
-  font-size: 1.25rem;
 }
 </style>
