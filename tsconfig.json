@@ -15,14 +15,7 @@
       "@/*": ["./src/*", "./dist/*"]
     },
     "lib": ["esnext", "dom"],
-    "types": [
-      "vuetify",
-      "vite/client",
-      "jest",
-      "@types/jest",
-      "node",
-      "cypress"
-    ]
+    "types": ["vite/client", "jest", "@types/jest", "node", "cypress"]
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
   "exclude": ["node_modules"]

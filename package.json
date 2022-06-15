@@ -17,8 +17,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "vue": "^3.2.36",
-    "vuetify": "^3.0.0-alpha.0"
+    "vue": "^3.2.36"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.0",
