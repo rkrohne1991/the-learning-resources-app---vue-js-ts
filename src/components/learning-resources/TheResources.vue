@@ -53,7 +53,7 @@ export default defineComponent({
     };
   },
   provide() {
-    return { resources: this.storedResources };
+    return { resources: this.storedResources, addResource: this.addResource };
   },
   computed: {
     storedResButtonMode() {
@@ -66,6 +66,16 @@ export default defineComponent({
   methods: {
     setSelectedTab(tab: string) {
       this.selectedTab = tab;
+    },
+    addResource(title: string, description: string, url: string) {
+      const newResource = {
+        id: new Date().toISOString(),
+        title,
+        description,
+        link: url,
+      };
+      this.storedResources.unshift(newResource);
+      this.selectedTab = 'stored-resources';
     },
   },
 });
