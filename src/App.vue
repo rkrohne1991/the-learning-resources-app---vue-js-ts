@@ -1,5 +1,5 @@
 <template>
-  <the-header title="RememberMe"></the-header>
+  <the-header title="The Learning Resources App"></the-header>
   <the-resources />
 </template>
 
