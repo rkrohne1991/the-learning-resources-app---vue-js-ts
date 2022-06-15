@@ -1,19 +1,13 @@
 <template>
-  <v-btn depressed :type="buttonType" :class="mode"><slot></slot></v-btn>
+  <v-btn depressed :class="mode"><slot></slot></v-btn>
 </template>
 
 <script lang="ts">
-import type { PropType } from 'vue';
 import { defineComponent } from 'vue';
-
-type theButtonType = 'button' | 'submit' | 'reset' | undefined;
 
 export default defineComponent({
   name: 'BaseButton',
   props: {
-    buttonType: {
-      type: String as PropType<theButtonType>,
-    },
     mode: {
       type: String,
     },

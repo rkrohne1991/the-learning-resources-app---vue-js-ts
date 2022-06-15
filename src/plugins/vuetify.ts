@@ -8,6 +8,7 @@ export const vuetify = createVuetify({
   components,
   directives,
   theme: {
+    // dark: true,
     themes: {
       light: {
         colors: {
