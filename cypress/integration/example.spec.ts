@@ -3,6 +3,6 @@
 describe('My First Test', () => {
   it('visits the app root url', () => {
     cy.visit('/');
-    cy.contains('.v-toolbar-title__placeholder', 'The Learning Resources App');
+    cy.contains('header', 'The Learning Resources App');
   });
 });
